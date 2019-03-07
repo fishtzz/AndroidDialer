@@ -27,4 +27,10 @@
     <dimen name="min_swipe">0dip</dimen>
     <dimen name="min_vert">10dip</dimen>
     <dimen name="min_lock">20dip</dimen>
+
+
+    <!-- Duration of the InCallUI reveal and shrink animations after a call is placed -->
+    <integer name="reveal_animation_duration">333</integer>
+    <integer name="shrink_animation_duration">333</integer>
+    <integer name="video_animation_duration">257</integer>
 </resources>
