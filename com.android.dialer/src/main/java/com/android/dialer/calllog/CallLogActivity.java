@@ -34,7 +34,6 @@ import com.android.contacts.common.interactions.TouchPointManager;
 import com.android.contacts.common.list.ViewPagerTabs;
 import com.android.dialer.DialtactsActivity;
 import com.android.dialer.R;
-import com.android.dialer.StatisticsUtil;
 import com.android.dialer.TransactionSafeActivity;
 import com.android.dialer.logging.Logger;
 import com.android.dialer.logging.ScreenEvent;
@@ -156,13 +155,11 @@ public class CallLogActivity extends TransactionSafeActivity implements ViewPage
         mIsResumed = true;
         super.onResume();
         sendScreenViewForChildFragment(mViewPager.getCurrentItem());
-        StatisticsUtil.onResume(this);
     }
 
     @Override
     protected void onPause() {
         mIsResumed = false;
-        StatisticsUtil.onPause(this);
         super.onPause();
     }
 

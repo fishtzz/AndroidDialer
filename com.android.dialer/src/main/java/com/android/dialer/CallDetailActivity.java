@@ -319,12 +319,10 @@ public class CallDetailActivity extends AppCompatActivity
         super.onResume();
         mContactsPreferences.refreshValue(ContactsPreferences.DISPLAY_ORDER_KEY);
         getCallDetails();
-        StatisticsUtil.onResume(this);
     }
 
     @Override
     protected void onPause() {
-        StatisticsUtil.onPause(this);
         super.onPause();
     }
 

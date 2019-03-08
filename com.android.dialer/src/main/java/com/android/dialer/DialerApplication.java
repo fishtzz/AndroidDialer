@@ -26,7 +26,6 @@ import com.android.contacts.common.extensions.ExtensionsFactory;
 import com.android.contacts.common.testing.NeededForTesting;
 import com.android.dialer.database.FilteredNumberAsyncQueryHandler;
 import com.android.dialer.filterednumber.BlockedNumbersAutoMigrator;
-import com.umeng.analytics.MobclickAgent;
 
 public class DialerApplication extends Application {
 
@@ -45,8 +44,6 @@ public class DialerApplication extends Application {
         new BlockedNumbersAutoMigrator(PreferenceManager.getDefaultSharedPreferences(this),
                 new FilteredNumberAsyncQueryHandler(getContentResolver())).autoMigrate();
         Trace.endSection();
-
-        MobclickAgent.setDebugMode(true);
     }
 
     @Nullable
